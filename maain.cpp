@@ -9,12 +9,17 @@ int main(){
      SetTargetFPS(60);
 
      Grid grid =Grid();
+     grid.grid[0][0]=1;
+     grid.grid[3][5]=1;
+     grid.grid[17][8]=1;
      grid.print();
 
      
      while(WindowShouldClose()==false)
      {
         BeginDrawing();
+        ClearBackground(darkblue);
+        grid.draw();
         
         
         EndDrawing();
